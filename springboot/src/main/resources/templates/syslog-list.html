@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            font-size: 14px;
+            width: 80%;
+            margin: auto
+        }
+
+        table, th, td {
+            border: 1px solid darkslategray;
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center">
+    <span style="color: darkslategray; font-size: 30px">欢迎光临！</span>
+    <hr/>
+    <table class="list">
+        <tr>
+            <th>id</th>
+            <th>姓名</th>
+            <th>访问时间</th>
+            <th>IP</th>
+            <th>停留时长</th>
+            <th>URL</th>
+            <th>方法</th>
+        </tr>
+        <tr th:each="syslog : ${syslogList}">
+            <td th:text="${syslog.id}">1</td>
+            <td th:text="${syslog.username}">张三</td>
+            <td th:text="${syslog.visitTimeStr}">2015-5-25 12:00:00</td>
+            <td th:text="${syslog.ip}">192.168.0.103</td>
+            <td th:text="${syslog.executionTimeStr}">32ms</td>
+            <td th:text="${syslog.url}">/test/</td>
+            <td th:text="${syslog.method}">TestController.test()</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

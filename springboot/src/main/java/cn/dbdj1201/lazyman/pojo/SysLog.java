@@ -1,6 +1,8 @@
 package cn.dbdj1201.lazyman.pojo;
 
 import cn.dbdj1201.lazyman.utils.DateUtils;
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.code.Style;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +15,8 @@ import java.util.Date;
  * @author tyz1201
  * @datetime 2020-03-14 10:42
  **/
-@Table(name = "role")
+@Table(name = "syslog")
+@NameStyle(Style.normal)
 public class SysLog implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

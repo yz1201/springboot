@@ -26,6 +26,7 @@ public class SysLogServiceImpl implements ISysLogService {
 
     @Override
     public void save(SysLog sysLog) {
+        System.out.println("i need save ?");
         this.sysLogMapper.insert(sysLog);
     }
 
