@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author tyz1201
  * @datetime 2020-03-13 20:52
  **/
-@ConfigurationProperties(prefix = "jdbc")
 public class JdbcProperties {
 
     private String driverClassName;
