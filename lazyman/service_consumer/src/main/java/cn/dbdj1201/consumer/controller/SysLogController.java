@@ -6,6 +6,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.netflix.ribbon.RibbonLoadBalancerClient;
@@ -22,7 +23,6 @@ import java.util.List;
  * @datetime 2020-03-14 21:09
  **/
 @RestController
-@RequestMapping("syslog")
 //@DefaultProperties(defaultFallback = "querySysLogByIdFallBack") //定义全局的熔断方法。
 public class SysLogController {
 
@@ -52,7 +52,11 @@ public class SysLogController {
 //        return this.template.getForObject("http://" + instance.getHost() + ":" + instance.getPort() + "/syslog/list", List.class);
 //        return this.template.getForObject("http://service-provider/syslog/list", List.class);
         return sysLogClient.queryForAll();
+    }
 
+    @GetMapping("test")
+    public String test(){
+        return "test";
     }
 
 //    public String querySysLogByIdFallBack() {

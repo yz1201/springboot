@@ -2,11 +2,11 @@ server:
   port: 8888
 spring:
   application:
-    name: service-consumer
+    name: consumer
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost/eureka
+      defaultZone: http://localhost:12010/eureka
     fetch-registry: true
     registry-fetch-interval-seconds: 10
   #service-provider:
@@ -22,6 +22,10 @@ eureka:
 #          thread:
 #            timeoutInMilliseconds: 6000
 
-feign:
-  hystrix:
-    enabled: true # 开启Feign的熔断功能
+#feign:
+#  hystrix:
+#    enabled: true # 开启Feign的熔断功能
+
+#ribbon:
+#  eureka:
+#    enabled: true

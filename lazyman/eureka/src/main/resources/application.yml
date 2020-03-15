@@ -1,8 +1,8 @@
 server:
-  port: 80
+  port: 12010
 spring:
   application:
-    name: dbdj1201-eureka #作为微服务名称注入到eureka容器
+    name: eureka #作为微服务名称注入到eureka容器
 eureka:
   client:
     service-url:

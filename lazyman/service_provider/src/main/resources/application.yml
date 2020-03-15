@@ -7,13 +7,13 @@ spring:
     password: root
     username: root
   application:
-    name: service-provider #注册在容器中的微服务名
+    name: provider #注册在容器中的微服务名
 mybatis:
   type-aliases-package: cn.dbdj1201.provider.pojo
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost/eureka
+      defaultZone: http://localhost:12010/eureka
   instance:
     lease-expiration-duration-in-seconds: 10
     lease-renewal-interval-in-seconds: 30

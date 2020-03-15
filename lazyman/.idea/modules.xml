@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/lazyman.iml" filepath="$PROJECT_DIR$/.idea/lazyman.iml" />
       <module fileurl="file://$PROJECT_DIR$/service_consumer/service_consumer.iml" filepath="$PROJECT_DIR$/service_consumer/service_consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/service_provider/service_provider.iml" filepath="$PROJECT_DIR$/service_provider/service_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>
 </project>

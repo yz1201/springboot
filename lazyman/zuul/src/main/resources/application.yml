@@ -1,0 +1,27 @@
+server:
+  port: 80 #服务端口
+spring:
+  application:
+    name: zuul #指定服务名
+zuul:
+  routes:
+    #    provider:
+    #    prefix: /api
+    #      path: /provider/**
+    #            url:  http://localhost:8081
+    #      serviceId: provider
+    provider: /provider/**
+#      path: /provider/**
+#      url:  http://localhost:8081
+    consumer: /consumer/**
+#      path: /consumer/**
+#      serviceId: consumer
+#      url:  http://localhost:8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:12010/eureka
+ribbon:
+  eureka:
+    enabled: true
+

@@ -10,7 +10,7 @@ import java.util.List;
  * @author tyz1201
  * @datetime 2020-03-15 11:58
  **/
-@Component
+//@Component
 public class SysLogClientFallBack implements SysLogClient {
     @Override
     public SysLog querySysLogById(int id) {
