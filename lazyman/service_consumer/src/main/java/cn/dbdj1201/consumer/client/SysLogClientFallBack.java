@@ -10,7 +10,7 @@ import java.util.List;
  * @author tyz1201
  * @datetime 2020-03-15 11:58
  **/
-//@Component
+@Component
 public class SysLogClientFallBack implements SysLogClient {
     @Override
     public SysLog querySysLogById(int id) {
@@ -21,7 +21,7 @@ public class SysLogClientFallBack implements SysLogClient {
 
     @Override
     public List<SysLog> queryForAll() {
-        System.out.println("???");
+        System.out.println("请求降级了???，不能查询所有人");
         return new ArrayList<>();
     }
 }

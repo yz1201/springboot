@@ -12,7 +12,6 @@ eureka:
   #service-provider:
   # ribbon:
   #   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-
 # 设置hystrix的超时时间为6000ms
 #hystrix:
 #  command:
@@ -20,12 +19,21 @@ eureka:
 #      execution:
 #        isolation:
 #          thread:
-#            timeoutInMilliseconds: 6000
+#            timeoutInMilliseconds: 10000
 
-#feign:
-#  hystrix:
-#    enabled: true # 开启Feign的熔断功能
-
-#ribbon:
-#  eureka:
-#    enabled: true
+feign:
+  hystrix:
+    enabled: true # 开启Feign的熔断功能
+  client:
+    config:
+      default:
+        connectTimeout: 5000 # feign 的超时设置
+        readTimeout: 5000
+ribbon:
+  eureka:
+    enabled: true
+  eager-load:
+    enabled: true
+    clients: provider
+#logging:
+#  level: debug
